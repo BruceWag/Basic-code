@@ -1,32 +1,32 @@
 #include <stdio.h>
 
 int main() {
-    int num1, num2, operationCode;
+    int num1, num2, operationCode, result;
 
-    scanf("%d %d %d", &num1, &num2, &operationCode);
-
-    
-    if (operationCode == 1) {
-        printf("%d\n", num1 + num2);
-    }
-    else if (operationCode == 2) {
-        printf("%d\n", num1 - num2);
-    }
-    else if (operationCode == 3) {
-        printf("%d\n", num1 * num2);
-    }
-    else if (operationCode == 4) {
-        if (num2 != 0) {
-            printf("%d\n", num1 / num2);
-        } else {
-            printf("Error\n");
-        }
+    if (scanf("%d %d %d", &num1, &num2, &operationCode) != 3) {
+        return 1;
     }
 
-    else {
-        printf("Invalid Operation\n");
+    switch (operationCode) {
+        case 1:
+            result = num1 + num2;
+            printf("%d", result);
+            break;
+        case 2:
+            result = num1 - num2;
+            printf("%d", result);
+            break;
+        case 3:
+            result = num1 * num2;
+            printf("%d", result);
+            break;
+        case 4:
+            result = num1 / num2; 
+            printf("%d", result);
+            break;
+        default:
+            printf("Invalid Operation");
     }
 
     return 0;
-
 }
