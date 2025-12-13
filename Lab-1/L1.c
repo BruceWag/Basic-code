@@ -7,10 +7,16 @@ int main() {
         return 1;
     }
 
-    for (i = 0; i < N; i++) {
-        printf("Hello Loop!\n");
+    if (N <= 0) {
+        printf("Error");
+    } else {
+        for (i = 0; i < N; i++) {
+            printf("Hello Loop!");
+            if (i < N - 1) {
+                printf("\n");
+            }
+        }
     }
-    
- 
+
     return 0;
 }
