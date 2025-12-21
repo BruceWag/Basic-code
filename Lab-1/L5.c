@@ -12,9 +12,9 @@ int main() {
     while (number != 0) {
 
         if (number % 2 == 0) {
-            evenSum = evenSum + number;
+            evenSum += number;
         } else {
-            oddSum = oddSum + number;
+            oddSum += number;
         }
 
         if (scanf("%d", &number) != 1) {
